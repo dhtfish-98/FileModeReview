@@ -26,7 +26,7 @@ def review_tree(root: Path) -> list[dict[str, str]]:
                 continue
             rel = path.relative_to(root).as_posix()
             if mode & stat.S_IWOTH:
-                findings.append({"rule": "world-writable", "location": rel, "note": "Any local user can write this file"})
-            if path.name.lower().endswith(SENSITIVE_SUFFIXES) and mode & (stat.S_IRWXG | stat.S_IRWXO):
+                findings.append({"rule": "world-writable", "location": rel, "note": "World-write mode bit is set; review effective access"})
+            if (path.name.lower().endswith(SENSITIVE_SUFFIXES) or path.name.lower().startswith(".env.")) and mode & (stat.S_IRWXG | stat.S_IRWXO):
                 findings.append({"rule": "sensitive-file-exposed", "location": rel, "note": "Sensitive-name file has group or other permissions"})
     return findings

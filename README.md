@@ -27,3 +27,7 @@ POSIX modes alone do not cover ACLs, ownership, encryption, open handles or effe
 - Technical reference: https://docs.python.org/3/library/stat.html
 - See [ORIGIN.md](ORIGIN.md) for implementation provenance and [VALIDATION.md](VALIDATION.md) for checks performed.
 - CVP eligibility depends on a real, legitimate defensive task affected by Claude's cyber safeguards and the applicant's organization/identity review; this repository alone does not establish eligibility or approval. [Anthropic CVP guidance](https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude-opus-and-sonnet).
+
+## Reviewed input behavior
+
+Directory traversal errors propagate to the CLI. .env variants are included in sensitive-name prompts. Findings describe permission bits; effective access still depends on ownership, ACLs and filesystem state.

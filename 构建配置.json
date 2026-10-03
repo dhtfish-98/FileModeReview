@@ -1,0 +1,30 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "FileModeReview",
+  "author": "dhtfish98",
+  "kind": "manual",
+  "base_public_commit": "289a3cc1f8bb54f6ec914b216d3ab0d5a824ff21",
+  "restored_inputs": [
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "61cc81f0067016c9425160ac683a0791c1f9332a48ffe655d21b2602286e21be"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "8d41515681b352055b2768582f2cf4b665feebfa18dfd6573d96baf47691df4f"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "7b0bdc055a43a2630eb7135157d6af8a5da77db320efd1f7b09d27284bd19f10"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "a7bb7dc6961eb97ce789174a30460fa6fb7aee1a17f55d9829d7685352a85ccb"
+    }
+  ],
+  "platform_entries": []
+}
